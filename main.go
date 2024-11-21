@@ -4,7 +4,6 @@ import (
 	"cloud.google.com/go/firestore"
 	"context"
 	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
 	"google.golang.org/api/option"
 	"log"
 	"net/http"
@@ -14,14 +13,10 @@ import (
 var client *firestore.Client
 
 func main() {
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatalf("Error loading .env file")
-	}
-
 	ctx := context.Background()
 	credentials := os.Getenv("FIREBASE_CREDENTIALS")
 
+	var err error
 	client, err = firestore.NewClient(ctx, "gdgoc-backend-6ba98", option.WithCredentialsJSON([]byte(credentials)))
 	if err != nil {
 		log.Fatalf("Failed to create Firstore client: %v", err)

@@ -4,8 +4,6 @@ This is the source code for the GDGoC Backend Study Case - creating a RESTful AP
 
 ## Links
 
-Full documentation on website: https://gdgoc-besc-debertjamie.vercel.app/
-
-API link: https://gdgoc-besc-api.vercel.app/
+Full documentation on website: https://gdgoc-besc-debertjamie.netlify.app/
 
 Youtube documentation: https://www.youtube.com/watch?v=
